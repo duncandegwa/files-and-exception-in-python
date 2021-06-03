@@ -8,7 +8,7 @@ Have some basic knowledge of Python language.
 
 ### Reading from a file
 
-Working with data in a text file, you need to read the file into memory first. To read a file, you need to have a file with some data.
+Working with data in a text file, you need to read the file into memory first. To read a file, you must have a file with some data.
 
 Let’s create a text file containing a list of years from 2020 to 2022 using an editor and save it in the same folder that stores our Python files as **years.txt**. The **years.txt** file should have:
 
@@ -128,7 +128,7 @@ My name is Felix.
 
 #### Appending to a file
 
-When you want to add data into a file, open the file in *append mode*. Any data you write will be added at the end of the file.
+To add data into a file, open the file in *append mode*. Any data you write will be placed at the end of the file.
 
 Let’s add some lines in the **student.txt** file
 
@@ -156,13 +156,13 @@ I love playing games
 
 ### Exceptions
 
-Exceptions are unique objects that Python uses to control errors that occur when a program is running. Exceptions errors arise when correct syntactically Python programs produce an error. When these errors occur, Python creates an exception object. When we write codes that deal with the exception, our programs will continue running. If we don’t our programs will stop executing and show a trace-back, which is very hard for a user to understand.
+Exceptions are unique objects that Python uses to control errors that occur when a program is running. Exceptions errors arise when correct syntactically Python programs produce an error. When these errors arise, Python creates an exception object. When we write codes that deal with the exception, our programs will continue running. If we don’t our programs will stop executing and show a trace-back, which is very hard for a user to understand.
 
-In Python, the try-except block is used to handle exceptions. A try-except block informs Python what to do if an exception occurs. Our programs will continue to execute even if things go wrong.
+Python uses the *try-except* block to control exceptions. A try-except block informs Python how to act when an exception emerges. Our programs will continue to execute even if things go wrong.
 
 ### Handling the ZeroDivisionError exception
 
-Let’s run a program that divides a number by zero. We all know that it is impossible, but let’s see what Python will do.
+Let’s run a program that divides a number by zero. We absolutely know it is impractical, but let’s see what Python will do.
 
 ```python
 
@@ -186,7 +186,7 @@ ZeroDivisionError: division by zero
 
 Since Python cannot divide a number by zero, it reports an error in the trace-back, *ZeroDivisionError*, which is an exception object. This kind of object responds to a scenario where Python can’t do what we asked it to.
 
-In case you think of an error occurring use the try-except block to handle the exception that might be raised.
+If you think of an error occurring use the *try-except* block to control the exception that may be raised.
 
 To handle the ZeroDivisionError exception use a try-except block like this:
 
@@ -204,7 +204,7 @@ except ZeroDivisionError:
 
 ### Handling the FileNotFoundError exception
 
-Errors will always arise when working with files that are missing. The files may miss because you might have misspelled the filename, or the file doesn’t exist at all. We handle this situation using the try-except block. For example, the program below tries to read a file that doesn’t exist on my computer.
+Errors will always arise when working with files that are missing. Python may fail to get file if you have written the wrong spelling of filename, or the file never exists. We handle this situation by applying the try-except block. For example, the program below tries to read a file that doesn’t exist on my computer.
 
 ```python
 
@@ -214,11 +214,11 @@ with open(filename) as f_obj:
 
  contents = f_obj.read()
 
-```
+ ```
 
  Since Python can not read a file that does not exist, it raises an exception:
 
-```python
+ ```python
 
 Traceback (most recent call last):
 
@@ -228,9 +228,9 @@ Traceback (most recent call last):
 
 FileNotFoundError: [Errno 2] No such file or directory: ‘john.txt’
 
-```
+ ```
 
-Since Python can not find the file, we are opening it creates an exception that is the *FileNotFoundError* exception. In the above example, the **open()** function creates the error. To solve this error, use the try block just before the line, which involves the **open()** function:
+Since Python can not find the file, we are opening it creates an exception that is the *FileNotFoundError* exception. In this example, the **open()** function creates the error. To solve this error, use the try block just before the line, which involves the **open()** function:
 
 ```python
 
@@ -248,8 +248,7 @@ except FileNotFoundError:
 
  print(msg) # Sorry, the file John.txt does not exist.
 
- 
-```
+ ```
 
 ### Conclusion
 
